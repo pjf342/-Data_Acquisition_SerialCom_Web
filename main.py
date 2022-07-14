@@ -6,9 +6,11 @@ import pyqtgraph as pg
 import sys
 import numpy as np
 import pandas as pd
-
 import serial_communication as sc
 import MPU6050_web_scrapper as ws
+from dotenv import load_dotenv
+
+load_dotenv()
 
 print(f'Main imports loaded in {t.perf_counter() - start_time} seconds')
 
@@ -340,7 +342,7 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == '__main__':
-    url = 
+    url = 'URL'
     time_interval = .104  # Data record rate (s) - should match microcontroller output rate
     plot_time_interval = .1  # Plot update rate (s)
     app = QApplication(sys.argv)
